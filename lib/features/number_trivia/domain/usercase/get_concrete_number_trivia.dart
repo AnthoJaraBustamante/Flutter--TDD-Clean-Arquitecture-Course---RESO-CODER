@@ -1,8 +1,8 @@
+import 'package:clean_arq_tdd_course/core/error/failures.dart';
+import 'package:clean_arq_tdd_course/core/usecases/usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
-import '../../../core/error/failures.dart';
-import '../../../core/usecases/usecase.dart';
 import '../entities/number_trivia.dart';
 import '../repositories/number_trivia_repository.dart';
 

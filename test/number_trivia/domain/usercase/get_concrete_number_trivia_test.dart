@@ -1,7 +1,7 @@
-import 'package:clean_arq_tdd_course/core/error/failures.dart';
-import 'package:clean_arq_tdd_course/number_trivia/domain/entities/number_trivia.dart';
-import 'package:clean_arq_tdd_course/number_trivia/domain/repositories/number_trivia_repository.dart';
-import 'package:clean_arq_tdd_course/number_trivia/domain/usercase/get_concrete_number_trivia.dart';
+ 
+import 'package:clean_arq_tdd_course/features/number_trivia/domain/entities/number_trivia.dart';
+import 'package:clean_arq_tdd_course/features/number_trivia/domain/repositories/number_trivia_repository.dart';
+import 'package:clean_arq_tdd_course/features/number_trivia/domain/usercase/get_concrete_number_trivia.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -25,7 +25,7 @@ void main() {
       when(() => mockNumberTriviaRepository.getConcreteNumberTrivia(any()))
           .thenAnswer((_) async => const Right(tNumberTrivia));
       //act
-      final Either<Failure, NumberTrivia> result =
+      final Either<dynamic, NumberTrivia> result =
           await usecase(const Params(number: tNumber));
       //assert
       expect(result, const Right(tNumberTrivia));
